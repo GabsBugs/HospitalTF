@@ -1,0 +1,82 @@
+
+
+<nav class="navbar" style="background-color: #12065f;">
+  <div class="container">
+       <a class="navbar-brand" href="#">
+         <img src="assets/logo222.png" alt="Bootstrap" width="220" height="80">
+       </a>
+       <a class="navbar-brand" style="color: #ffffff;"
+         href="#"> Home </a>
+       <a class="navbar-brand"  style="color: #ffffff;" href="#">O Hospital </a>
+       <a class="navbar-brand"  style="color: #ffffff;" href="#">Serviços</a>
+       <a class="navbar-brand"  style="color: #ffffff;" href="#">Resultado de exames</a>
+       <a class="navbar-brand"  style="color: #ffffff;" href="#">Agendamentos</a>
+       <a class="navbar-brand"  style="color: #ffffff;" href="#">Contatos</a>
+  </div>
+ </nav>
+
+
+
+<!-- <nav style="margin:auto" class="navbar navbar-expand-lg bg-dark">
+
+  <a class="navbar-brand" href="#">
+    <img src="assets/logo222.png" alt="Bootstrap" width="220" height="80">
+  </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a style="color: white;"class="nav-link active" aria-current="page" href="javascript:void(0);" routerLink="/home">Home</a>
+        </li>
+
+
+
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+
+  </nav> -->
+
+
+  <div class="container">
+
+    <div class="row">
+
+
+        <div class="col-md-6">
+            <div class="card">
+
+                <div class="text-center">
+                    <h1>Faça login como Admin</h1>
+                    <h6>Coloque seu nome de usuario e sua senha</h6>
+
+                </div>
+                <form>
+
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label"><h4> Nome de usuario</h4></label>
+                        <input type="text" name="username2" [(ngModel)]="username2" class="form-control" id="formGroupExampleInput" placeholder="nome de usuario" required>
+                      </div>
+                      <div class="mb-3">
+                        <label for="formGroupExampleInput2" class="form-label"><h4>Senha</h4></label>
+                        <input type="password" name="password2" [(ngModel)]="password2" class="form-control" id="formGroupExampleInput2" placeholder="senha" required>
+                      </div>
+                      <div class="d-grid gap-2 d-md-block">
+                        <button (click)="checkLogin()"  style="margin: 5px;"  class="btn btn-success" type="button">Login</button>
+                        <button style="margin: 5px;" class="btn btn-warning" type="button" routerLink="/home">cancelar</button>
+                      </div>
+
+                </form>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+

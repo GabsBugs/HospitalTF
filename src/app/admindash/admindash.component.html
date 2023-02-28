@@ -1,0 +1,64 @@
+<nav class="navbar" style="background-color: #12065f;">
+  <div class="container">
+       <a class="navbar-brand" href="#">
+         <img src="assets/logo222.png" alt="Bootstrap" width="220" height="80">
+       </a>
+       <a class="navbar-brand" style="color: #ffffff;"
+         href="#"> Compromissos </a>
+
+  </div>
+  <div class="mx-2">
+
+    <button style="margin: 5px;"class="btn btn-danger" data-toggle="modal" data-target="#loginModal"><a style="color:white;" href="javascript:void(0);" routerLink="/home">Logout</a></button>
+
+</div>
+ </nav>
+
+
+
+
+  <div class="container">
+    <hr>
+  <hr>
+  <hr>
+    <h2>Painel de administração</h2>
+    <a style="color: rgb(86, 86, 86); font-size: x-large;"><marquee behavior="scroll" direction="left">
+      Bem-vindo ao Painel de Administração. Por favor, encontre a lista de pacientes abaixo!!. Clique em Compromissos para exibir e atualizar Compromissos, clique em Adicionar Compromisso para adicionar um novo Compromisso</marquee></a>
+  <hr>
+    <input type="text" name="search" [(ngModel)]="searchText" placeholder="Pesquisar">
+    <br>
+    <a style="color: rgb(86, 86, 86); font-size: xx-large;">Lista de pacientes atuais</a>
+<div class="tableFixHead">
+  <br>
+  <table class="table table-striped">
+    <thead class="table-header">
+      <tr>
+        <th>Id</th>
+        <th>Nome</th>
+        <th>Idade</th>
+
+
+
+        <th>Taxas</th>
+        <th>Urgencia</th>
+        <th>Necessidade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let patient of patients | filter:searchText">
+        <td>{{patient.id}}</td>
+        <td>{{patient.name}}</td>
+        <td>{{patient.age}}</td>
+
+
+
+        <td>{{patient.fees}}</td>
+        <td>{{patient.urgency}}</td>
+        <td>
+
+          <button (click) = "deletePatient(patient.id)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </div>

@@ -1,0 +1,58 @@
+
+<nav class="navbar" style="background-color: #12065f;">
+  <div class="container">
+       <a class="navbar-brand" href="#">
+         <img src="assets/logo222.png" alt="Bootstrap" width="220" height="80">
+       </a>
+       <a class="navbar-brand" style="color: #ffffff;"
+         href="#"> Home </a>
+       <a class="navbar-brand"  style="color: #ffffff;" href="#">O Hospital </a>
+       <a class="navbar-brand"  style="color: #ffffff;" href="#">Serviços</a>
+       <a class="navbar-brand"  style="color: #ffffff;" href="#">Resultado de exames</a>
+       <a class="navbar-brand"  style="color: #ffffff;" href="#">Agendamentos</a>
+       <a class="navbar-brand"  style="color: #ffffff;" href="#">Contatos</a>
+  </div>
+ </nav>
+
+
+
+
+  <div class="container">
+
+    <div class="row">
+
+
+        <div class="col-md-6">
+            <div class="card">
+
+                <div class="text-center">
+                    <h1>Faça seu login como doutor</h1>
+                    <h6>Coloque seu nome de usuario e sua senha</h6>
+
+                </div>
+                <form>
+
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label"><h4>Nome de usuario</h4></label>
+                        <input type="text" name="nomedeusuario" [(ngModel)]="username" class="form-control" id="formGroupExampleInput" placeholder="nome de usuario" required>
+                      </div>
+                      <div class="mb-3">
+                        <label for="formGroupExampleInput2" class="form-label"><h4>Senha</h4></label>
+                        <input type="password" name="senha" [(ngModel)]="password" class="form-control" id="formGroupExampleInput2" placeholder="senha" required>
+                      </div>
+                      <div class="d-grid gap-2 d-md-block">
+
+                        <button (click)=checkLogin() style="margin: 5px;"  class="btn btn-success" type="button" >Login</button>
+
+                        <button style="margin: 5px;" class="btn btn-warning" type="button" routerLink="/home">Cancelar</button>
+                      </div>
+
+                </form>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+

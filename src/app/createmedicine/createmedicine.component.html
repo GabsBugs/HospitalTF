@@ -1,0 +1,44 @@
+<nav class="navbar" style="background-color: #12065f;">
+  <div class="container">
+       <a class="navbar-brand" href="#">
+         <img src="assets/logo222.png" alt="Bootstrap" width="220" height="80">
+       </a>
+
+  </div>
+  <div class="mx-2">
+
+    <button style="margin: 5px;"class="btn btn-danger" data-toggle="modal" data-target="#loginModal"><a style="color: white;"class="nav-link active" aria-current="page" href="javascript:void(0);" routerLink="/docdash">Back</a> </button>
+
+</div>
+ </nav>
+ <nav class="navbar" style="background-color: #ffffff;" width="100" height="70">
+ </nav>
+
+
+
+
+
+<div class="container">
+    <hr>
+    <hr>
+    <hr>
+    <h3>Adicionar medicamento</h3>
+    <form (ngSubmit) = "onSubmit()">
+        <div class="form-group">
+            <label> ID </label>
+            <input type="number" class="form-control" [(ngModel)]="medicine.id" id="id" name="id">
+        </div>
+
+        <div class="form-group">
+            <label> Nome do medicamento </label>
+            <input type="text" class="form-control" [(ngModel)]="medicine.drugName" id="drugName" name="drugName">
+        </div>
+
+        <div class="form-group">
+            <label> Estoque </label>
+            <input type="text" class="form-control" [(ngModel)]="medicine.stock" id="stock" name="stock">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-success">Enviar</button>
+    </form>
+    </div>

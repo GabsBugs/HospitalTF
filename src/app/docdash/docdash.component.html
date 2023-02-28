@@ -1,0 +1,82 @@
+<nav class="navbar" style="background-color: #12065f;">
+  <div class="container">
+       <a class="navbar-brand" href="#">
+         <img src="assets/logo222.png" alt="Bootstrap" width="220" height="80">
+       </a>
+       <a class="navbar-brand" style="color: #ffffff;"
+         href="#"> Home </a>
+
+         <a class="navbar-brand">
+          <a style="color: white;"class="nav-link active" aria-current="page" href="javascript:void(0);" routerLink="/createpatient">Adicionar paciente</a>
+        </a>
+
+        <a class="navbar-brand">
+          <a style="color: white;"class="nav-link active" aria-current="page" href="javascript:void(0);" routerLink="/medicinelist">Exibir medicamentos</a>
+        </a>
+
+  </div>
+  <div class="mx-2">
+
+    <button style="margin: 5px;"class="btn btn-danger" data-toggle="modal" data-target="#loginModal"><a style="color:white;" href="javascript:void(0);" routerLink="/home">Logout</a></button>
+
+</div>
+ </nav>
+ <nav class="navbar" style="background-color: #ffffff;" width="100" height="70">
+ </nav>
+
+
+
+
+
+
+
+<div class="grid">
+<div class="container">
+  <hr>
+  <hr>
+  <hr>
+  <h2>Painel de controle</h2>
+  <a style="color: rgb(86, 86, 86); font-size: x-large;"><marquee behavior="scroll" direction="left">
+    Bem-vindo ao Painel de controle. Por favor, pesquise os pacientes disponiveis no espaço abaixo!!. Clique em Adicionar paciente para adicionar pacientes, clique em Exibir medicamentos para visualizar e atualizar medicamentos</marquee></a>
+  <hr>
+  <input type="text" name="search" [(ngModel)]="searchText" placeholder="Pesquisar">
+
+<br>
+<a style="color: rgb(86, 86, 86); font-size: xx-large;">Lista de pacientes atuais</a>
+<div class="tableFixHead">
+  <br>
+  <table class="table table-striped">
+  <thead class="table-header">
+    <tr>
+      <th>Id</th>
+      <th>Nome</th>
+      <th>Idade</th>
+      <th>Tipo sanguíneo</th>
+
+
+
+      <th>Urgencia</th>
+      <th>Necessidade</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let patient of patients | filter:searchText">
+      <td>{{patient.id}}</td>
+      <td>{{patient.name}}</td>
+      <td>{{patient.age}}</td>
+      <td>{{patient.blood}}</td>
+
+
+
+      <td>{{patient.urgency}}</td>
+      <td>
+        <button (click) = "updatePatient(patient.id)" class="btn btn-info">Update</button>
+        <button (click) = "deletePatient(patient.id)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+        <button (click) = "viewPatient(patient.id)" class="btn btn-success" style="margin-left: 10px;">View</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
