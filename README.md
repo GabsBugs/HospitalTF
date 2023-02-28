@@ -1,7 +1,7 @@
 ## 🚀 About Me
 Meu nome é Gabrielly e esse é meu projeto final da SoulCode
 
-# Hospital Management System Project
+# Hospital 
 
 O projeto hospitalar é construído com Angular e Springboot. O principal objetivo do projeto é projetar e desenvolver um site de gestão hospitalar que possa ser acessado pelo médico e o administrador. 
 
