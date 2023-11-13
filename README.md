@@ -1,5 +1,5 @@
 ## 🚀 About Me
-Meu nome é Gabrielly e esse é meu projeto final da SoulCode
+Meu nome é Gabrielly, tenho 20 anos e esse é um projeto hospitalar.
 
 # Hospital 
 
